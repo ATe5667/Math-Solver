@@ -1,34 +1,74 @@
 Requirements:
+tkinter
+sympy
+matplotlib
 
 Running:
 1) Download all the files
 2) Run main.py
 
-Features:
+Features (implemented):
 Algebra
-Solve polynomial equations (includes Find local/global minima and maxima of functions)
-Solve systems of equations
-Factorization of expressions
-Expand and simplify algebraic expressions
-Solve inequalities
-2D graphing of functions (includes Interactive graphs with sliders to change parameters, Plot multiple functions on the same graph)
-Solve symbolic equations (e.g., x + a = b)
+Solve a polynomial equation
+Solve a system of equations
+Factorise an expression
+Expand and/or simplify an algebraic expression
+Solve an inequality
+2D graphing of functions
+Solve a symbolic equation
 Simulate projectile motion
 
 Calculus
-Compute derivatives
-Compute definite and indefinite integrals
-Find limits (including L'Hôpital's Rule)
-Symbolic differentiation and integration
+Compute a derivative
+Compute a definite integral
+Find limits
+Symbolic differentiation
+Symbolic integration
 
 Linear Algebra
-Matrix operations
+Matrix addition
+Matrix subtraction
+Matrix multiplication
 
 Numbers
-Prime factorization
-Greatest Common Divisor (GCD) & Least Common Multiple (LCM)
-Modular arithmetic and inverse modulo calculations
+Prime factorisation
+Greatest Common Divisor (GCD)
+Least Common Multiple (LCM)
 
 Statistics
-Compute mean, median, variance, and standard deviation
-Probability distributions (Normal, Binomial, Poisson, etc.)
+Basic statistics (mean, median, mode, variance, standard deviation)
+Binomial probability distribution
+Geometric probability distribution
+Poisson probability distribution
+Normal probability distribution
+
+
+Features (not implemented):
+Algebra
+2D graphing of functions
+Solve a symbolic equation
+Simulate projectile motion
+
+Calculus
+Compute a derivative
+Compute a definite integral
+Find limits
+Symbolic differentiation
+Symbolic integration
+
+Linear Algebra
+Matrix addition
+Matrix subtraction
+Matrix multiplication
+
+Numbers
+Prime factorisation
+Greatest Common Divisor (GCD)
+Least Common Multiple (LCM)
+
+Statistics
+Basic statistics (mean, median, mode, variance, standard deviation)
+Binomial probability distribution
+Geometric probability distribution
+Poisson probability distribution
+Normal probability distribution
