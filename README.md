@@ -1,7 +1,7 @@
 Requirements:
-tkinter
-sympy
-matplotlib
+1) tkinter
+2) sympy
+3) matplotlib
 
 Running:
 1) Download all the files
