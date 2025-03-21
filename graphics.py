@@ -117,7 +117,7 @@ def display_features(topic):
 
 root = tk.Tk()
 root.title("Math Solver")
-root.geometry("1200x700")
+root.geometry("1200x1000")
 root.resizable(False, False)
 
 display_main_menu()
