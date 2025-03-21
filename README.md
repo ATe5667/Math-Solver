@@ -9,39 +9,39 @@ Running:
 
 Features (implemented):
 Algebra
-Solve a polynomial equation
-Solve a system of equations
-Factorise an expression
-Expand and/or simplify an algebraic expression
-Solve an inequality
+1) Solve a polynomial equation
+2) Solve a system of equations
+3) Factorise an expression
+4) Expand and/or simplify an algebraic expression
+5) Solve an inequality
 
 
 Features (not implemented):
 Algebra
-2D graphing of functions
-Solve a symbolic equation
-Simulate projectile motion
+1) 2D graphing of functions
+2) Solve a symbolic equation
+3) Simulate projectile motion
 
 Calculus
-Compute a derivative
-Compute a definite integral
-Find limits
-Symbolic differentiation
-Symbolic integration
+4) Compute a derivative
+5) Compute a definite integral
+6) Find limits
+7) Symbolic differentiation
+8) Symbolic integration
 
 Linear Algebra
-Matrix addition
-Matrix subtraction
-Matrix multiplication
+9) Matrix addition
+10) Matrix subtraction
+11) Matrix multiplication
 
 Numbers
-Prime factorisation
-Greatest Common Divisor (GCD)
-Least Common Multiple (LCM)
+12) Prime factorisation
+13) Greatest Common Divisor (GCD)
+14) Least Common Multiple (LCM)
 
 Statistics
-Basic statistics (mean, median, mode, variance, standard deviation)
-Binomial probability distribution
-Geometric probability distribution
-Poisson probability distribution
-Normal probability distribution
+15) Basic statistics (mean, median, mode, variance, standard deviation)
+16) Binomial probability distribution
+17) Geometric probability distribution
+18) Poisson probability distribution
+19) Normal probability distribution
