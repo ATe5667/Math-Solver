@@ -8,7 +8,7 @@ Running:
 2) Run main.py
 
 Features (implemented):
-Algebra
+a) Algebra
 1) Solve a polynomial equation
 2) Solve a system of equations
 3) Factorise an expression
@@ -17,29 +17,29 @@ Algebra
 
 
 Features (not implemented):
-Algebra
+a) Algebra
 1) 2D graphing of functions
 2) Solve a symbolic equation
 3) Simulate projectile motion
 
-Calculus
+b) Calculus
 4) Compute a derivative
 5) Compute a definite integral
 6) Find limits
 7) Symbolic differentiation
 8) Symbolic integration
 
-Linear Algebra
+c) Linear Algebra
 9) Matrix addition
 10) Matrix subtraction
 11) Matrix multiplication
 
-Numbers
+d) Numbers
 12) Prime factorisation
 13) Greatest Common Divisor (GCD)
 14) Least Common Multiple (LCM)
 
-Statistics
+e) Statistics
 15) Basic statistics (mean, median, mode, variance, standard deviation)
 16) Binomial probability distribution
 17) Geometric probability distribution
