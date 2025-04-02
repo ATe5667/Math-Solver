@@ -18,28 +18,29 @@ a) Algebra
 7) Solve a symbolic equation
 8) Simulate projectile motion
 
+b) Calculus
+1) Compute a derivative
 
 Features (not implemented):
 b) Calculus
-4) Compute a derivative
-5) Compute a definite integral
-6) Find limits
-7) Symbolic differentiation
-8) Symbolic integration
+1) Compute a definite integral
+2) Find limits
+3) Symbolic differentiation
+4) Symbolic integration
 
 c) Linear Algebra
-9) Matrix addition
-10) Matrix subtraction
-11) Matrix multiplication
+1) Matrix addition
+2) Matrix subtraction
+3) Matrix multiplication
 
 d) Numbers
-12) Prime factorisation
-13) Greatest Common Divisor (GCD)
-14) Least Common Multiple (LCM)
+1) Prime factorisation
+2) Greatest Common Divisor (GCD)
+3) Least Common Multiple (LCM)
 
 e) Statistics
-15) Basic statistics (mean, median, mode, variance, standard deviation)
-16) Binomial probability distribution
-17) Geometric probability distribution
-18) Poisson probability distribution
-19) Normal probability distribution
+1) Basic statistics (mean, median, mode, variance, standard deviation)
+2) Binomial probability distribution
+3) Geometric probability distribution
+4) Poisson probability distribution
+5) Normal probability distribution
