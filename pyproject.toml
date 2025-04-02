@@ -15,3 +15,5 @@ dependencies = [
     "matplotlib",
     "numpy"
 ]
+readme = "README.md"
+license = {text = "MIT"}
