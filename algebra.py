@@ -329,5 +329,134 @@ def graph_functions(root, clear_screen):
 def solve_symbolic_equation(root, clear_screen):
     clear_screen()
 
+    title = tk.Label(root, text="Solve a Symbolic Equation", font=("Helvetica", 24))
+    title.pack(pady=10)
+
+    entry_label = tk.Label(root, text="Enter an equation (e.g., 2*x + y - 5 = 0):", font=("Helvetica", 16))
+    entry_label.pack(pady=5)
+
+    entry = tk.Entry(root, font=("Helvetica", 16), width=40)
+    entry.pack(pady=5)
+
+    var_label = tk.Label(root, text="Solve for (e.g., x):", font=("Helvetica", 16))
+    var_label.pack(pady=5)
+
+    var_entry = tk.Entry(root, font=("Helvetica", 16), width=10)
+    var_entry.pack(pady=5)
+
+    solution_frame = tk.Frame(root)
+    solution_frame.pack(pady=10)
+
+    def display_latex_expression(expression):
+        for widget in solution_frame.winfo_children():
+            widget.destroy()
+
+        fig, ax = plt.subplots(figsize=(5, 1))
+        ax.text(0.5, 0.5, f"${sp.latex(expression)}$", fontsize=16, ha='center', va='center')
+        ax.axis("off")
+
+        canvas = FigureCanvasTkAgg(fig, master=solution_frame)
+        canvas_widget = canvas.get_tk_widget()
+        canvas_widget.pack()
+        canvas.draw()
+
+    def compute_symbolic_solution():
+        equation = entry.get()
+        variable = var_entry.get()
+        try:
+            symbols = sp.symbols(variable)
+            parsed_eq = sp.sympify(equation.replace("=", "-(") + ")")
+            solution = sp.solve(parsed_eq, symbols)
+
+            if not solution:
+                display_latex_expression("No solution")
+            else:
+                display_latex_expression(solution)
+        except Exception as e:
+            with open("error_log.txt", "a") as log_file:
+                log_file.write(f"Error: {str(e)}\n")
+            display_latex_expression("Something went wrong. Check your equation.")
+
+    solve_button = tk.Button(root, text="Solve", font=("Helvetica", 16), bg="blue", fg="white", command=compute_symbolic_solution)
+    solve_button.pack(pady=10)
+
 def simulate_projectile_motion(root, clear_screen):
     clear_screen()
+
+    title = tk.Label(root, text="Solve Projectile Motion", font=("Helvetica", 24))
+    title.pack(pady=10)
+
+    v0_label = tk.Label(root, text="Initial velocity (m/s):", font=("Helvetica", 16))
+    v0_label.pack(pady=5)
+    v0_entry = tk.Entry(root, font=("Helvetica", 16), width=10)
+    v0_entry.pack(pady=5)
+
+    angle_label = tk.Label(root, text="Launch angle (degrees):", font=("Helvetica", 16))
+    angle_label.pack(pady=5)
+    angle_entry = tk.Entry(root, font=("Helvetica", 16), width=10)
+    angle_entry.pack(pady=5)
+
+    h_label = tk.Label(root, text="Initial height (m):", font=("Helvetica", 16))
+    h_label.pack(pady=5)
+    h_entry = tk.Entry(root, font=("Helvetica", 16), width=10)
+    h_entry.pack(pady=5)
+
+    solution_frame = tk.Frame(root)
+    solution_frame.pack(pady=10)
+
+    def display_latex_expression(expression):
+        for widget in solution_frame.winfo_children():
+            widget.destroy()
+
+        fig, ax = plt.subplots(figsize=(10, 0.5))
+        ax.text(0.5, 0.5, f"${sp.latex(expression)}$", fontsize=16, ha='center', va='center')
+        ax.axis("off")
+
+        canvas = FigureCanvasTkAgg(fig, master=solution_frame)
+        canvas_widget = canvas.get_tk_widget()
+        canvas_widget.pack()
+        canvas.draw()
+
+    def compute_projectile_solution():
+        try:
+            v0 = float(v0_entry.get())
+            theta = float(angle_entry.get())
+            h = float(h_entry.get())
+            g = 9.81
+
+            theta_rad = np.radians(theta)
+            v0x = v0 * np.cos(theta_rad)
+            v0y = v0 * np.sin(theta_rad)
+
+            t_flight = (v0y + np.sqrt(v0y**2 + 2 * g * h)) / g
+            max_height = h + (v0y**2) / (2 * g)
+            range_ = v0x * t_flight
+
+            result = f"Time of Flight: {t_flight:.2f} s, Max Height: {max_height:.2f} m, Range: {range_:.2f} m"
+            display_latex_expression(result)
+
+            # Graph projectile motion
+            t_vals = np.linspace(0, t_flight, num=400)
+            x_vals = v0x * t_vals
+            y_vals = h + v0y * t_vals - 0.5 * g * t_vals**2
+
+            fig, ax = plt.subplots(figsize=(6, 4))
+            ax.plot(x_vals, y_vals, label="Projectile Path")
+            ax.set_xlabel("Horizontal Distance (m)")
+            ax.set_ylabel("Vertical Distance (m)")
+            ax.set_title("Projectile Motion")
+            ax.axhline(0, color='black', linewidth=0.5)
+            ax.grid(True)
+            ax.legend()
+
+            canvas = FigureCanvasTkAgg(fig, master=root)
+            canvas_widget = canvas.get_tk_widget()
+            canvas_widget.pack()
+            canvas.draw()
+        except Exception as e:
+            with open("error_log.txt", "a") as log_file:
+                log_file.write(f"Error: {str(e)}\n")
+            display_latex_expression("Invalid input. Check your values.")
+
+    solve_button = tk.Button(root, text="Solve", font=("Helvetica", 16), bg="blue", fg="white", command=compute_projectile_solution)
+    solve_button.pack(pady=10)

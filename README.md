@@ -14,14 +14,12 @@ a) Algebra
 3) Factorise an expression
 4) Expand and/or simplify an algebraic expression
 5) Solve an inequality
+6) 2D graphing of functions
+7) Solve a symbolic equation
+8) Simulate projectile motion
 
 
 Features (not implemented):
-a) Algebra
-1) 2D graphing of functions
-2) Solve a symbolic equation
-3) Simulate projectile motion
-
 b) Calculus
 4) Compute a derivative
 5) Compute a definite integral
